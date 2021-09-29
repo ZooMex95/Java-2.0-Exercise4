@@ -29,7 +29,7 @@ public class Gift {
     public String toString() {
         String description = "В подарке:\n";
         for (int i = 0; i < GIFT.size(); i++) {
-            description += i+1 + ") " + "Название: " + GIFT.get(i).name + " вес: " + GIFT.get(i).weight + " цена: " + GIFT.get(i).price + "\n";
+            description += i+1 + ") " + GIFT.get(i) + "\n";
         }
         return description;
     }

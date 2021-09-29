@@ -33,9 +33,7 @@ public class Main {
             if (array[i] < 0) {
                 maxIndex = i;
             }
-            if (minIndex * maxIndex != 0) {
-                break;
-            }
+
         }
 
         for (int i = 0; i < array.length; i++) {
