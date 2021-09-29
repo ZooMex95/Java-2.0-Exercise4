@@ -46,8 +46,8 @@ public class Main {
                 minIndex = i;
             }
         }
-        System.out.println("Min positive number index: " + minIndex);
-        System.out.println("Max negative number index: " + maxIndex);
+        System.out.println("Min positive number : " + array[minIndex]);
+        System.out.println("Max negative number : " + array[maxIndex]);
         temp = array[maxIndex];
         array[maxIndex] = array[minIndex];
         array[minIndex] = temp;
