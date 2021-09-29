@@ -24,26 +24,22 @@ public class Main {
     public static int[] changeElements(int[] array) {
         int maxIndex = 0;
         int minIndex = 0;
+        int maxNegative = -10;
+        int minPositive = 10;
         int temp;
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > 0) {
-                minIndex = i;
-            }
-            if (array[i] < 0) {
+            if ((array[i] < 0) && (array[i] > maxNegative)) {
+                maxNegative = array[i];
                 maxIndex = i;
+            }
+            if ((array[i] > 0) && (array[i] < minPositive)) {
+                minPositive = array[i];
+                minIndex = i;
             }
 
         }
 
-        for (int i = 0; i < array.length; i++) {
-            if ((array[i] < 0) && (array[i] > array[maxIndex])) {
-                maxIndex = i;
-            }
-            if ((array[i] > 0) && (array[i] < array[minIndex])) {
-                minIndex = i;
-            }
-        }
         System.out.println("Min positive number : " + array[minIndex]);
         System.out.println("Max negative number : " + array[maxIndex]);
         temp = array[maxIndex];
